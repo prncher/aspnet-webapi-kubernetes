@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: webapiapp-app-deployment
+spec:
+    replicas: 1
+    selector:
+    matchLabels:
+        app: webapiapp-app
+    template:
+    metadata:
+        labels:
+        app: webapiapp-app
+    spec:
+        containers:
+        - name: webapiapp-container
+        image: webapiapp
+        imagePullPolicy: Never # Crucial for local images
+        ports:
+        - containerPort: 8080 # Replace with your application's port

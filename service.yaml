@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: webapiapp-app-service
+spec:
+    selector:
+    app: webapiapp-app
+    ports:
+    - protocol: TCP
+        port: 30080
+        targetPort: 8080 # Replace with your application's port
+    type: NodePort # Or ClusterIP, LoadBalancer depending on your needs
