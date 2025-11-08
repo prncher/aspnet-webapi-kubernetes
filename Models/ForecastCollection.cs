@@ -8,6 +8,7 @@ namespace TestWebApi.Models
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
+
         private WeatherForecast[] weatherCollection;
         private int index;
 
